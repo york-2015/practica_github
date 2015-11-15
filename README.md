@@ -1,4 +1,4 @@
-# practica_githup
+# practica_github
 Carpeta para practica solo garabatos ///
 
 
