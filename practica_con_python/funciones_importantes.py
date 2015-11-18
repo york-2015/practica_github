@@ -140,3 +140,13 @@ class hotel(object):
                 " - Puntaje: "+ str(self.puntaje) + " - Precio: "+ \
                 str(self.precio)+ " pesos."
 #----------------------clase avansadas------------------------------------
+
+
+#----------------------------------------class---------------------------------
+
+hola = raw_input("esto es una pregunta ")
+adol = Personas(hola, hola, hola, hola)
+
+
+print adol
+#----------------------------------------class---------------------------------
