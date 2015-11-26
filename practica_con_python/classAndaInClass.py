@@ -1,42 +1,86 @@
+//------------------------comentarios--------------------------
 
-class Personas(object):#crea la caja de la persona  
-	def __init__(self, nombre = "", direccion = "", otra_boludes = "" , edad = ""):
-		self.nombre = nombre
-		self.direccion = direccion
-		self.otra_boludes = otra_boludes
-		self.edad = edad
-
-	def __str__(self):
-		return self.nombre+ " "+ self.direccion+ " "+ self.otra_boludes+ " "+ self.edad+ \
-		"FUNCIONA"
+//hola hola hola 
 
 
-class Preguntador(Personas):
-	def __init__(self): #pregunta los datos con funciones fuera de la class 
-		self.n1 = raw_input("primer 1nombre1a")
-		self.n2 = raw_input("primer 1nombre1a")
-		self.n3 = raw_input("primer 1nombre1a")
-		self.n4 = raw_input("primer 1nombre1a")
+/*
 
-	def poner_nombre(self):
-		
-		self.Persona = Personas(self.n1, self.n2, self.n3, self.n4)
-		return self.Persona
+hola que hay de nuevo 
+con sartos de pagians 
 
 
-	def lo_en_listo(self, lista_out):#crea una lista con los datos dados 
-		self.lista_out = lista_out
-		self.lista_llena = self.lista_out.append(self.Persona)
-		
-	
-	def __str__(self):#lo hace visible 
-		return self.lista_llena
+*/
 
-pregunta = Preguntador()
-#crear una lista de nombre unirlos con una lista de class
+//------------------------comentarios--------------------------
 
-print pregunta.poner_nombre()
-lista_nombre = []
-pregunta.lo_en_listo(lista_nombre)
+//--------------------------comparadores------------------------------- 
+ > Mayor que
+ < Menor que
+ <= Menor o igual que
+ >= Mayor o igual que
+ === Igual que
+!== Distinto de
+//--------------------------comparadores-------------------------------
 
-print lista_nombre
+
+//----------------------------mide en numeros el string-----------------
+
+"cadena de mierda".length
+
+//----------------------------mide en numeros el string-----------------
+
+//--------------------------------------muestra lo quiere del string----------
+"milanesas".substring(3,7);
+
+//--------------------------------------muestra lo quiere del string----------
+
+//-----------------------------cajas de dialogos----------------------------
+confirm("pelotudaaa lesbiana de mierda " );
+//-----------------------------cajas de dialogos----------------------------
+
+
+
+
+
+//----------------------variable una variable------------------
+
+var algo = "algo algo"
+var algo = 1000
+var algo = prompt("te pregunto algo");
+
+algo = "te canbio de valor" //le doy otro significado
+
+//----------------------variable una variable------------------
+
+//----------------------preguntar algo------------------------
+var edad = prompt("¿Cuántos años tenés?");
+//----------------------preguntar algo------------------------
+
+
+//-----------------------------  for, else ----------------------
+
+for (auto === perro)
+{
+	console.log("algo algo");
+}
+else
+{
+	console.log("algo algo 2 ");
+}
+//-----------------------------  for, else ----------------------
+
+
+//-----------------------------imprimir----------------------
+
+console.log("Qué bueno verte," + " " + nombre);
+
+//-----------------------------imprimir----------------------
+
+//---------------------------------funcion--------------------
+
+var saludo = function (nombre) {
+    console.log("Qué bueno verte," + " " + nombre);
+};
+
+saludo("jorge");
+//---------------------------------funcion--------------------
