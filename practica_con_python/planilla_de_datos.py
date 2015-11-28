@@ -1,7 +1,7 @@
 
 
-class Preguntador():
 	
+class Preguntador():
 	def __init__(self): #pregunta los tados con funciones fuera de la class 
 		self.nombre_de_la_class = preguntar_nombre_clase()
 		self.preguntar_los_datoos   = preguntar_los_datoos()
