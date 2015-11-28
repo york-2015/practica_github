@@ -25,18 +25,31 @@ class Preguntador(Personas):
 
 	def lo_en_listo(self, lista_out):#crea una lista con los datos dados 
 		self.lista_out = lista_out#con la lista que elijas 
-		self.poner_nombre_estenombre = self.poner_nombre()#
+		self.poner_nombre_estenombre = self.poner_nombre()
 		self.lista_llena = self.lista_out.append(self.poner_nombre_estenombre)
 		return self.lista_llena
 	
 
 listaDeClases = []
+continualo = False
 
-listaId = [1, 2, 3]
+while not continualo:
 
-for i in range(0, 3):
-	listaId[i] = Preguntador()
-	listaId[i].lo_en_listo(listaDeClases)
+	listaId = [1, 2, 3] #Lista con codigo ID para nombre de  la clase 
+
+	for i in range(0, 3):#Intera por la lista 
+		listaId[i] = Preguntador()#Se crean las lista 
+		listaId[i].lo_en_listo(listaDeClases)#Pon las listas ya creadas en la lista principal
 
 
-print listaDeClases
+	print listaDeClases #Muestra toda la lista de listas 
+	
+	salir = raw_input("Quieres salir y/n: ")
+	if salir == "y":
+		continualo = True
+	else:
+		pass
+
+for i in listaDeClases:
+	for a in i:
+		print listaDeClases[i][a]	
