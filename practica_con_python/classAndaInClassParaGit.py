@@ -12,10 +12,10 @@ class Personas(object):#crea la caja de la persona
 
 class Preguntador(Personas):
 	def __init__(self): #pregunta los datos con funciones fuera de la class 
-		self.n1 = raw_input("primer 1nombre1a") #-----esto se hace primero-----
-		self.n2 = raw_input("primer 1nombre1a")
-		self.n3 = raw_input("primer 1nombre1a")
-		self.n4 = raw_input("primer 1nombre1a")
+		self.n1 = raw_input("Dato Nombre 1: ") #-----esto se hace primero-----
+		self.n2 = raw_input("Dato Nombre 2: ")
+		self.n3 = raw_input("Dato Nombre 3: ")
+		self.n4 = raw_input("Dato Nombre 4: ")
 
 	def poner_nombre(self):#---------esto cuando lo llaman 
 		
@@ -29,12 +29,6 @@ class Preguntador(Personas):
 		self.lista_llena = self.lista_out.append(self.poner_nombre_estenombre)
 		return self.lista_llena
 	
-"""lista_nombre = []
-pregunta = Preguntador()
-pregunta.lo_en_listo(lista_nombre)
-
-print lista_nombre
-"""
 
 listaDeClases = []
 
@@ -42,13 +36,7 @@ listaId = [1, 2, 3]
 
 for i in range(0, 3):
 	listaId[i] = Preguntador()
-	print listaId[i].poner_nombre()
-	listaDeClases.append(listaId[i])
+	listaId[i].lo_en_listo(listaDeClases)
 
 
-preguntarUser = raw_input("quieres provar la matris y/pass: ")
-
-if preguntarUser == "y":
-	print listaId[0][0]
-else: 
-	pass
+print listaDeClases
