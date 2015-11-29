@@ -44,8 +44,8 @@ confirm("pelotudaaa lesbiana de mierda " );
 
 //----------------------variable una variable------------------
 
-var algo = "algo algo"
-var algo = 1000
+var algo = "algo algo" ;
+var algo = 1000 ;
 var algo = prompt("te pregunto algo");
 
 algo = "te canbio de valor" //le doy otro significado
@@ -73,6 +73,12 @@ else
 //-----------------------------imprimir----------------------
 
 console.log("Qué bueno verte," + " " + nombre);
+
+var string = "la puta madre";
+console.log("Qué bueno verte, %s" , string ); //creoo
+
+var nose = "hola esto es un string "
+	console.log("esto es un texto\n%s", nose  );	
 
 //-----------------------------imprimir----------------------
 
