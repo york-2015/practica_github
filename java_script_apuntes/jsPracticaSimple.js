@@ -7,7 +7,7 @@ var hola = function(holaSenora){
 	console.log(holaSenora);
 };
 
-hola("pene")
+hola("holassss")
 
 var perro = prompt("hola ");
 
