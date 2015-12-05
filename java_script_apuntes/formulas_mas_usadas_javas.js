@@ -90,3 +90,14 @@ var saludo = function (nombre) {
 
 saludo("jorge");
 //---------------------------------funcion--------------------
+
+//-------------------------------Comando return----------------------
+var porDos = function(numero) {
+    return numero * 2;
+};
+
+// llama a porDos acá
+var nuevoNumero = porDos(8)
+console.log(nuevoNumero);
+
+//-------------------------------Comando return----------------------
