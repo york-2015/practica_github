@@ -1,4 +1,4 @@
-# probar TkInter para interfas grafica 
+#TkInter, EasyGUI 
 
 ganancia = 0
 costosDeProducion = 

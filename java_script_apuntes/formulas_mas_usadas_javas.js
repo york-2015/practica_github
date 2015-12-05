@@ -35,7 +35,7 @@ con sartos de pagians
 //--------------------------------------muestra lo quiere del string----------
 
 //-----------------------------cajas de dialogos----------------------------
-confirm("pelotudaaa lesbiana de mierda " );
+confirm("loca de re loca, asi es la vida" );
 //-----------------------------cajas de dialogos----------------------------
 
 
@@ -50,6 +50,15 @@ var algo = prompt("te pregunto algo");
 
 algo = "te canbio de valor" //le doy otro significado
 
+//var global
+
+var algo = "hola"
+//var local
+
+var hola = function(){
+	var hola2 = "variable "
+	console.log(hola2);
+};
 //----------------------variable una variable------------------
 
 //----------------------preguntar algo------------------------
@@ -99,5 +108,35 @@ var porDos = function(numero) {
 // llama a porDos acá
 var nuevoNumero = porDos(8)
 console.log(nuevoNumero);
+ //SEGUNDO EJERSICIO+++++++++++++++++++++++++++++++++
+var unCuarto = function(numero){
+    return numero / 4;
+    };
+
+if (unCuarto(0) % 3 === 0 ) {
+  console.log("La sentencia es verdadera");
+} else {
+  console.log("La sentencia es falsa");
+}
+//TERCER EJERCICIO+++++++++++++++++++++++++++++++++
+var perimetroCaja = function(longitud, ancho)
+{
+    return longitud * 2 + ancho * 2;    
+}
+perimetroCaja(10, 5);
+//cuarto ejercicio+++++++++++++++++++++++++++++++
+var nombreCadena = function ( nombre) {
+    return "hola, soy" + " " + nombre;
+};
+nombreCadena("jorge");
+
+
 
 //-------------------------------Comando return----------------------
+
+
+//---------------------------------random Math----------------------
+var computadoraElige = Math.random()
+
+//---------------------------------random Math----------------------
+
