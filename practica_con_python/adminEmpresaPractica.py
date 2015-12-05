@@ -1,4 +1,4 @@
-
+# probar TkInter para interfas grafica 
 
 ganancia = 0
 costosDeProducion = 
