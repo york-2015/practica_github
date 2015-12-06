@@ -69,9 +69,9 @@ class FormulaDeverHaber():
             self.patrimonioNeto = int(raw_input("Cuales son los Patrimonio Neto: "))
             self.gregarMasPN = str(raw_input("QUIERES AGREGAS MAS A PN Y/N: "))
             
-            if self.gregarMasPN == self.y or self.y.upper():
+            if self.gregarMasPN in (self.y, self.y.upper()):
                 self.sumaPN += int(self.patrimonioNeto) 
-            elif self.gregarMasPN == self.n or self.n.upper():
+            elif self.gregarMasPN == self.n :
                 
                 self.seguir = True
             else:
@@ -103,4 +103,3 @@ DARLE UNA INTERFAS
 """
 
 
-2
