@@ -43,7 +43,7 @@ def lista_imput():
 		n = "n"
 		y = "y" 
 		if continuar == n or n.upper():
-			otra == False
+			otra = False
 			break
 
 		elif continuar == y or y.upper():

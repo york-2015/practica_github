@@ -60,7 +60,7 @@ class FormulaDeverHaber():
         self.pasivoFinanciero = raw_input("Cuales son los pasivo Financiero: ")
         
         #Pratimonio NETO
-        self.sumaPN = 0 
+        self.sumaPN = 0 #Aqui se guarda la suma del patrimonio neto 
         self.seguir = False
         self.y = "y"
         self.n = "n"
@@ -80,6 +80,28 @@ class FormulaDeverHaber():
                 self.seguir = True
         
         print self.sumaPN
+
+    def activo(self):
+        self.activoTotal = self.pasivoComercial + self.pasivoFiscal + self.pasivoFinanciero
+    def pasivo(self):
+        self.pasivoTotal = self.deUso + self.deDisponibilidad + self.deCredito 
+    def patrimonioNeto(self):
+        self.totalPatrimonioNeto = self.sumaPN 
+    def ecuacionPatrimonial(self, a, p, pn):
+        #variables 
+        self.a = a 
+        self.p = p
+        self.pn = pn 
+
+        if a == (p + pn):
+            sumaPPn = p + pn
+            return "es true"+ sumaPPn
+        else:
+            return "a no es igual "
+
+    
+
+
 
         #####RESULTADO DEL EJERCICIO#####
 
