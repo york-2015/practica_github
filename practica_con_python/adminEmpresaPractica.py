@@ -80,37 +80,21 @@ class FormulaDeverHaber():
                 self.seguir = True
         
         print self.sumaPN
-
-    def activo(self):
-        self.activoTotal = self.pasivoComercial + self.pasivoFiscal + self.pasivoFinanciero
-    def pasivo(self):
         self.pasivoTotal = self.deUso + self.deDisponibilidad + self.deCredito 
-    
-
-
-    def ecuacionPatrimonial(self, a, p, pn):
-        #variables 
-        self.a = a 
-        self.p = p
-        self.pn = pn 
-        self.sumaPPnCopy = self.sumaPN
+        self.activoTotal = self.pasivoComercial + self.pasivoFiscal + self.pasivoFinanciero
+        
+    def ecuacionPatrimonial(self):
         #Si es igual di es true y la suma del pn 
-        self.sumapMasN = self.p + self.pn
-        if self.a == self.sumapMasN:
-            return "es true"+ self.sumaPPnCopy
+        self.sumapMasN = self.pasivoTotal + self.sumaPN
+        if self.activoTotal == self.sumapMasN:
+            return "es true" 
         else:
             return "a no es igual "
     
     def __str__(self):
-        self.activoI = self.activo()
-        self.pasivoI = self.pasivo()
          # pn-----------------------
-        self.ePMC = self.ecuacionPatrimonial(self.activoI, self.pasivoI, self.sumaPN)
+        self.ePMC = self.ecuacionPatrimonial()
 
-        """return "El pasivo es %i \nEl activo es %i \nEl patrimonio neto es %i \
-                                \n La ecuacion patrimonial es %i" & self.pasivoI, self.activoI,\
-                                self.patrimonioNetoSumaI, self.ePMC 
-                        """
         return self.ePMC
     
 
@@ -120,7 +104,7 @@ class FormulaDeverHaber():
 
 cuenta1 = FormulaDeverHaber()
 
-print cuenta1############################################
+print cuenta1
 
 """
 
