@@ -92,12 +92,19 @@ class FormulaDeverHaber():
         self.a = a 
         self.p = p
         self.pn = pn 
-
-        if a == (p + pn):
-            sumaPPn = p + pn
-            return "es true"+ sumaPPn
+        self.sumaPPnCopy = self.sumaPPn
+        if a == int(p + pn):
+            self.sumaPPnCopy = p + pn
+            return "es true"+ self.sumaPPnCopy
         else:
             return "a no es igual "
+    def __str__(self):
+        self.activoI = self.activo()
+        self.pasivoI = self.pasivo()
+        self.patrimonioNetoI = self.patrimonioNeto()
+        self.ePMC = self.ecuacionPatrimonial()
+
+        return 'El pasivo es +++ El activo es +++ El patrimonio neto es '
 
     
 
