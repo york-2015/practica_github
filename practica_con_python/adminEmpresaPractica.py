@@ -44,20 +44,20 @@ if activoSuma == pasivoSuma + patrimonioNetoSuma :
  
 class FormulaDeverHaber():
     def __init__(self): #Pregunta lo que necesitan
-        self.ganancia = raw_input("Cuales son las ganacia: ")
-        self.costosDeProducion = raw_input("Cuales son los costos de produccion")
+        self.ganancia = int(raw_input("Cuales son las ganacia: "))
+        self.costosDeProducion = int(raw_input("Cuales son los costos de produccion"))
         #Gastos 
-        self.gastosAdministrativo = raw_input("Cuales son los gastos ADMINISTRATIVOS: ")
-        self.gastosComercial = raw_input("Cuales son los gastos COMERCIALES: ")
-        self.gastoFinanciero = raw_input("Cuales son los gastos FINANCIEROS: ")
+        self.gastosAdministrativo = int(raw_input("Cuales son los gastos ADMINISTRATIVOS: "))
+        self.gastosComercial = int(raw_input("Cuales son los gastos COMERCIALES: "))
+        self.gastoFinanciero = int(raw_input("Cuales son los gastos FINANCIEROS: "))
         #Activo
-        self.deUso = raw_input("Cuales son los ACTIVOS DE USO: ")
-        self.deDisponibilidad = raw_input("Cuales son los ACTIVOS DE DISPONIBILIDAD ")
-        self.deCredito = raw_input("Cuales son los ACTIVOS DE CREDITO: ")
+        self.deUso = int(raw_input("Cuales son los ACTIVOS DE USO: "))
+        self.deDisponibilidad = int(raw_input("Cuales son los ACTIVOS DE DISPONIBILIDAD "))
+        self.deCredito = int(raw_input("Cuales son los ACTIVOS DE CREDITO: "))
         #Pasivo
-        self.pasivoComercial = raw_input("Cuales son los pasivos Comercial: ")
-        self.pasivoFiscal = raw_input("Cuales son los pasivo Fiscal: ")
-        self.pasivoFinanciero = raw_input("Cuales son los pasivo Financiero: ")
+        self.pasivoComercial = int(raw_input("Cuales son los pasivos Comercial: "))
+        self.pasivoFiscal = int(raw_input("Cuales son los pasivo Fiscal: "))
+        self.pasivoFinanciero = int(raw_input("Cuales son los pasivo Financiero: "))
         
         #Pratimonio NETO
         self.sumaPN = 0 #Aqui se guarda la suma del patrimonio neto 
@@ -70,7 +70,7 @@ class FormulaDeverHaber():
             self.gregarMasPN = str(raw_input("QUIERES AGREGAS MAS A PN Y/N: "))
             
             if self.gregarMasPN in (self.y, self.y.upper()):
-                self.sumaPN += int(self.patrimonioNeto) 
+                self.sumaPN += self.patrimonioNeto 
             elif self.gregarMasPN == self.n :
                 
                 self.seguir = True
@@ -85,27 +85,33 @@ class FormulaDeverHaber():
         self.activoTotal = self.pasivoComercial + self.pasivoFiscal + self.pasivoFinanciero
     def pasivo(self):
         self.pasivoTotal = self.deUso + self.deDisponibilidad + self.deCredito 
-    def patrimonioNeto(self):
-        self.totalPatrimonioNeto = self.sumaPN 
+    
+
+
     def ecuacionPatrimonial(self, a, p, pn):
         #variables 
         self.a = a 
         self.p = p
         self.pn = pn 
-        self.sumaPPnCopy = self.sumaPPn
-        if a == int(p + pn):
-            self.sumaPPnCopy = p + pn
+        self.sumaPPnCopy = self.sumaPN
+        #Si es igual di es true y la suma del pn 
+        self.sumapMasN = self.p + self.pn
+        if self.a == self.sumapMasN:
             return "es true"+ self.sumaPPnCopy
         else:
             return "a no es igual "
+    
     def __str__(self):
         self.activoI = self.activo()
         self.pasivoI = self.pasivo()
-        self.patrimonioNetoI = self.patrimonioNeto()
-        self.ePMC = self.ecuacionPatrimonial()
+         # pn-----------------------
+        self.ePMC = self.ecuacionPatrimonial(self.activoI, self.pasivoI, self.sumaPN)
 
-        return 'El pasivo es +++ El activo es +++ El patrimonio neto es '
-
+        """return "El pasivo es %i \nEl activo es %i \nEl patrimonio neto es %i \
+                                \n La ecuacion patrimonial es %i" & self.pasivoI, self.activoI,\
+                                self.patrimonioNetoSumaI, self.ePMC 
+                        """
+        return self.ePMC
     
 
 
@@ -114,6 +120,7 @@ class FormulaDeverHaber():
 
 cuenta1 = FormulaDeverHaber()
 
+print cuenta1############################################
 
 """
 

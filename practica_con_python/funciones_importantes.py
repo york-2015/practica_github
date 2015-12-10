@@ -150,3 +150,16 @@ adol = Personas(hola, hola, hola, hola)
 
 print adol
 #----------------------------------------class---------------------------------
+#_----------------------------------print--------------------------------------
+print self.nombre + " de "+ self.ubicacion+ \
+                " - Puntaje: "+ str(self.puntaje) + " - Precio: "+ \
+                str(self.precio)+ " pesos."
+
+print " hola    \n" #salto de linia 
+
+print """ hola 
+que hay de nuevo 
+que hay de nuevo """
+
+
+#-------------------------------------print----------------------------------
