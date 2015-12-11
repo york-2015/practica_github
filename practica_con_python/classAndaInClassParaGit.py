@@ -35,9 +35,9 @@ continualo = False
 
 while not continualo:
 
-	listaId = [1, 2, 3] #Lista con codigo ID para nombre de  la clase 
+	listaId = [1, 2, 3] #Lista con codigo ID para nombre de  la clase CREAR FORMULAR PARA AGREGAR ID  
 
-	for i in range(0, 3):#Intera por la lista 
+	for i in range(0, 3):#Intera por la lista CAMBIAR POR LEN 
 		listaId[i] = Preguntador()#Se crean las lista 
 		listaId[i].lo_en_listo(listaDeClases)#Pon las listas ya creadas en la lista principal
 
