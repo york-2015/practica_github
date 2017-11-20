@@ -1,3 +1,4 @@
+#objetivo crear una agenda 
 class Personas(object):#crea la caja de la persona  
 	def __init__(self, nombre = "", direccion = "", otra_boludes = "" , edad = ""):
 		self.nombre = nombre
@@ -31,9 +32,7 @@ class Preguntador(Personas):
 	
 
 listaDeClases = []
-continualo = False
-
-while not continualo:
+while True:
 
 	listaId = [1, 2, 3] #Lista con codigo ID para nombre de  la clase CREAR FORMULAR PARA AGREGAR ID  
 
@@ -42,11 +41,11 @@ while not continualo:
 		listaId[i].lo_en_listo(listaDeClases)#Pon las listas ya creadas en la lista principal
 
 
-	print listaDeClases #Muestra toda la lista de listas 
+	print listaDeClases #Muestra las listas de listas 
 	
 	salir = raw_input("Quieres salir y/n: ")
 	if salir == "y":
-		continualo = True
+		break
 	else:
 		pass
 
